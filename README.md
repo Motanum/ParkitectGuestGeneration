@@ -30,7 +30,7 @@ Video
 https://www.youtube.com/watch?v=m7ih4XepPQI
 
 TO DO
-I want to modify the color, which will come soon.
+DONE! - I want to modify the color, which will come soon.
 
 Contact info
 www.motanum.com or email at eugenio.motanum91 [AT] gmail.com
