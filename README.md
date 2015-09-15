@@ -6,6 +6,10 @@ code necesary to be pasted inside the savegame file in your parkitect folder.
 For exe, simply download directly from my dropbox. Might require some extra DLLs as it's compiled with Visual Studio
 https://www.dropbox.com/s/ikafdghqxkn1kne/GuestGeneration.exe?dl=0
 
+IMAGES - http://imgur.com/gallery/crYWg/
+
+REDDIT THREAD - https://www.reddit.com/r/ThemeParkitect/comments/3l2gno/1000_parkitect_guests_instructions_in_comment/
+
 How to use
 1. Open up the savegame you want to add the guests to.
 2. Go to the end, and see the last Guest ID.
