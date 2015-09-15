@@ -7,6 +7,13 @@ AppWizard has created this GuestGeneration application for you.
 This file contains a summary of what you will find in each of the files that
 make up your GuestGeneration application.
 
+Aplication by Eugenio Roman - Motanum
+Contact info at www.motanum.com or eugenio.motanum[AT]gmail.com
+
+Compile the CPP file or you can also download the exe already.
+Windows only, feel free to copy the code into your own project and compile your OSx or Linux versions, just do proper credit please.
+Cheers!
+
 
 GuestGeneration.vcxproj
     This is the main project file for VC++ projects generated using an Application Wizard.
