@@ -35,3 +35,6 @@ I want to modify the color, which will come soon.
 Contact info
 www.motanum.com or email at eugenio.motanum91 [AT] gmail.com
 
+Special Thanks to this Reddit thread for the inspiration figuring stuff out.
+https://www.reddit.com/r/ThemeParkitect/comments/3l1bwv/full_queue_small_profit/
+

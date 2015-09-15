@@ -18,9 +18,18 @@ float variance(float maxVariance)
 
 float clamp(float in) //Clamps to 1.0 if more than 1, clamps to 0.0 if less than 0
 {
-	if (in > 1.0)
+	if (in >= 1.0)
 		return 1.0;
-	if (in < 0.0)
+	if (in <= 0.0)
+		return 0.0;
+	return in;
+}
+
+float cClamp(float in) //Clamps to .99 if more than 1, clamps to 0.0 if less than 0
+{
+	if (in >= 0.99)
+		return 0.99;
+	if (in <= 0.0)
 		return 0.0;
 	return in;
 }
@@ -48,12 +57,24 @@ int main()
 	string sLName;
 	getline(cin, sLName);
 
+	//COLOR STUFF
+	float cRed, cGreen, cBlue, cVar;
+	cout << "\nWhat is the Base Color?\nRed (float, 0.0 < X < 1.0) :";
+	cin >> cRed;
+	cout << "Green (float, 0.0 < X < 1.0) :"; 
+	cin >> cGreen;
+	cout << "Blue (float, 0.0 < X < 1.0) :"; 
+	cin >> cBlue;
+	cout << "What color Variance do we apply?\n(float, 0 is no variance, 0.0 < X < 1.0): ";
+	cin >> cVar;
 
+
+	//Properties
 	cout << "\nMaximum Variance for Clones' properties? \n(float, 0 is no variance, 0.0 < X < 1.0): ";
 	float fMaxVar;
 	cin >> fMaxVar;
 
-	cout << "nausea Tolerance? (float, 0.0 < X < 1.0): ";
+	cout << "Nausea Tolerance? (float, 0.0 < X < 1.0): ";
 	float fNauseaTol;
 	cin >> fNauseaTol;
 	cout << "Minimum Intensity? (float, 0.0 < X < 1.0): ";
@@ -88,7 +109,8 @@ int main()
 	for (int i = 0; i < iCloneSize; i++)
 	{
 		textOut << "{\"@type\":\"Guest\",\"@id\":\"" << iStartID + i << "\",\"pos\":[3.52857471,3.,9.132595],\"rot\":[0.,0.,0.,1.],\"@c\":[[0.882352948,0.6745098,0.5882353],"
-			<< "[0.0481615141,0.00326693058,0.7974111]],\"tilesWalked\":10,\"guestNumber\":0,\"moneySpent\":0.,\"parkEnterTime\":0,"
+			<< "[" << cClamp(cRed + variance(cVar)) << "," << cClamp(cGreen + variance(cVar)) << "," << cClamp(cBlue + variance(cVar)) << "]],"
+			<< "\"tilesWalked\":10,\"guestNumber\":0,\"moneySpent\":0.,\"parkEnterTime\":0,"
 			<< "\"Happiness\":1.0,\"Tiredness\":0.0,\"Hunger\":0.0,\"Thirst\":0.0,\"ToiletUrgency\":0.0,"
 			<< "\"Nausea\":0.0,\"NauseaTolerance\":" << clamp(fNauseaTol + variance(fMaxVar)) << ",\"SugarBoost\":0.0,\"Money\":250,"
 			<< "\"MinIntensity\":" << clamp(fMinIntensity + variance(fMaxVar)) << ",\"MaxIntensity\":" << clamp(fMaxIntensity + variance(fMaxVar)) << ","
